@@ -3,63 +3,76 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Anubhav Kumar | Java Full Stack Developer</title>
+<meta name="description" content="Anubhav Kumar — Java Full Stack Developer. Spring Boot, Microservices, React, AWS. Open to opportunities.">
+<meta property="og:title" content="Anubhav Kumar — Java Full Stack Developer">
+<meta property="og:description" content="Spring Boot · Microservices · React · AWS — 600+ DSA problems solved.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="anubhav-kumar-portfolio.css">
-<script src="anubhav-kumar-portfolio.js"></script>
-
+<script src="anubhav-kumar-portfolio.js" defer></script>
 
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <!-- Navbar -->
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
 <div class="navbar-container">
-<a class="navbar-brand" href="#home">in</a>
-<button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+<a class="navbar-brand" href="#home">AK</a>
+<button class="navbar-toggle" onclick="toggleMenu()" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">☰</button>
 <ul class="navbar-menu" id="navbarMenu">
-<li><a class="navbar-link" href="#about" style="font-weight: 400;">About</a></li>
-<li><a class="navbar-link" href="#skills" style="font-weight: 400;">Skills</a></li>
-<li><a class="navbar-link" href="#experience" style="font-weight: 400;">Experience</a></li>
-<li><a class="navbar-link" href="#projects" style="font-weight: 400;">Projects</a></li>
-<li><a class="navbar-link" href="#achievements" style="font-weight: 400;">Achievements</a></li>
-<li><a class="navbar-link" href="#certifications" style="font-weight: 400;">Certifications</a></li>
-<li><a class="navbar-link" href="#contact" style="font-weight: 400;">Contact</a></li>
+        <li><a class="navbar-link" href="#about" style="font-weight: 400;"><span class="navbar-icon" aria-hidden="true"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M10.5 7a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zm-4.5 9c0-2.21 3.58-3.5 6-3.5s6 1.29 6 3.5V18H6v-2z"/></svg></span> About</a></li>
+        <li><a class="navbar-link" href="#skills" style="font-weight: 400;"><span class="navbar-icon" aria-hidden="true"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7 21v-2a4 4 0 014-4h2a4 4 0 014 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> Skills</a></li>
+        <li><a class="navbar-link" href="#experience" style="font-weight: 400;"><span class="navbar-icon" aria-hidden="true"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm-2 0V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></span> Experience</a></li>
+        <li><a class="navbar-link" href="#projects" style="font-weight: 400;"><span class="navbar-icon" aria-hidden="true"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7zm2 0v10h14V7H5z"/></svg></span> Projects</a></li>
+        <li><a class="navbar-link" href="#achievements" style="font-weight: 400;"><span class="navbar-icon" aria-hidden="true"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.91z"/></svg></span> Achievements</a></li>
+        <li><a class="navbar-link" href="#certifications" style="font-weight: 400;"><span class="navbar-icon" aria-hidden="true"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2zm0 16H7V5h10v14z"/></svg></span> Certifications</a></li>
 </ul>
 </div>
 </nav>
 <!-- Main Container -->
-<div class="main-container">
+<main id="main" class="main-container" role="main">
 <!-- Profile Header -->
 <section class="card profile-header" id="home" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-<div class="profile-banner"></div>
-<div class="profile-info">
-<div class="profile-picture">AK</div>
-<h1 class="profile-name">Anubhav Kumar</h1>
-<p class="profile-headline">Java Full Stack Developer | Spring Boot, Microservices, React | 600+ DSA Problems Solved | Building Scalable Web Applications</p>
-<p class="profile-location">📍 Bangalore, Karnataka, India</p>
-<div class="profile-stats">
-<div class="stat-item">
-<span class="stat-number">500+</span> connections
-                    </div>
-<div class="stat-item">
-                        Haldia Institute of Technology
-                    </div>
+<div class="profile-banner">
+    <img src="bannerImage.jpeg" alt="Profile banner" class="profile-banner-img">
 </div>
+<div class="profile-info">
+<img class="profile-picture" src="image.jpeg" alt="Anubhav Kumar" width="140" height="140">
+<h1 class="profile-name">Anubhav Kumar</h1>
+<p class="profile-headline">Full Stack Java Engineer | Spring Boot · React · Microservices · AWS | 560+ DSA @ GFG · 2× Ocean Certified · 1× HackerRank Certified Developer · Team Lead @ ACM Society | Building Scalable, High-Performance Banking & FinTech Platforms @ Capgemini</p>
+<p class="profile-location">📍 Bangalore, Karnataka, India</p>
+<p class="profile-contact">📱 <a href="tel:+916203084350">+91 6203084350</a> &nbsp;||&nbsp; <a href="mailto:anubhavkr.it@gmail.com">anubhavkr.it@gmail.com</a></p>
+
+<!-- profile stats removed as requested -->
+
+<!-- Primary actions + social links -->
 <div class="profile-buttons">
-<a class="btn btn-primary" href="#contact">Contact Info</a>
-<a class="btn btn-secondary" href="https://github.com/anubhavkumar" target="_blank">GitHub Profile</a>
-<button class="btn btn-secondary" onclick="downloadPortfolio()" style="border: 1px solid var(--linkedin-blue);">📥 Download Portfolio</button>
+    <a class="btn btn-primary" href="Anubhav_Kumar_Resume.pdf" download aria-label="Download resume PDF">📥 Resume</a>
+    <a class="btn btn-secondary" href="https://github.com/KrAnubhav" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+    <a class="btn btn-secondary" href="https://www.linkedin.com/in/anubhav-kumar-9aa3261a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
 </div>
 </div>
 </section>
 <!-- About Section -->
+ 
 <section class="card" id="about" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
 <div class="section">
 <h2 class="section-header">About</h2>
-<div class="section-content">
-<p>I am a passionate Full Stack Developer with hands-on experience in designing scalable systems and building 7+ end-to-end web applications using Java, Spring Boot, Microservices, and React. With a strong foundation in data structures and algorithms, I have solved 600+ problems on LeetCode and GeeksforGeeks, demonstrating my commitment to continuous learning and problem-solving excellence.</p>
-<br/>
-<p>Currently working at Capgemini India, I specialize in delivering high-performance solutions using REST APIs, Docker, and AWS in Agile-based sprints. My experience includes migrating legacy systems to modern architectures, implementing responsive UI components, and leading technical knowledge-sharing sessions to promote clean code practices.</p>
-<br/>
-<p>I am driven by a passion for technology, collaboration, and creating impactful solutions that drive business value. As a tech team lead and mentor, I enjoy sharing knowledge and helping teams grow while continuously expanding my expertise in cloud computing, system design, and modern development practices.</p>
+<div class="section-content about-professional">
+    <p>Every great product starts with a simple idea — and the drive to turn that idea into something real.</p>
+    <br>
+    <p>Hi, I’m a <strong>Full Stack Java Developer</strong> who thrives on that process — taking <strong>complex requirements</strong> and shaping them into <strong>scalable, high-performance web applications</strong> built on <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Microservices</strong>, and <strong>React</strong>.</p>
+        <br>
+<p>Over the past few years, I’ve delivered <strong>7+ end-to-end projects</strong> — from <strong>architecture design</strong> to <strong>deployment</strong> — ensuring every system I build is <strong>reliable</strong>, <strong>efficient</strong>, and <strong>user-centric</strong>. Along the way, I’ve honed a deep understanding of <strong>cloud-native architectures</strong>, <strong>RESTful APIs</strong>, and <strong>AWS</strong>, enabling me to engineer solutions that don’t just work, but <strong>scale seamlessly</strong>.</p>
+        <br>
+<p>My strong foundation in <strong>Data Structures and Algorithms</strong> — with <strong>600+ problems solved</strong> on <strong>LeetCode</strong> and <strong>GeeksforGeeks</strong> — keeps my <strong>problem-solving</strong> sharp and my designs clean. I’ve also <strong>migrated legacy systems</strong> into modern <strong>microservices</strong>, built <strong>responsive UIs</strong> with <strong>React</strong>, and led <strong>technical knowledge-sharing sessions</strong> to foster better coding practices across teams.</p>
+       <br>
+ <p>Today, at <strong>Capgemini India</strong>, I’m not just coding — I’m <strong>mentoring developers</strong>, <strong>leading discussions</strong>, and <strong>driving innovation</strong> within <strong>Agile teams</strong>.<br>
+    For me, software engineering is more than syntax and systems — it’s about <strong>crafting solutions</strong> that make an impact, <strong>collaborating</strong> with people who care, and <strong>constantly evolving</strong> with technology.</p>
+       <br>
+ <p>I’m on a continuous journey to master <strong>Cloud Computing</strong>, <strong>System Design</strong>, and <strong>Modern Development Practices</strong> — because every line of code should move us one step closer to building something extraordinary.</p>
+      <br>
+  <p><em>Always open to meaningful opportunities — happy to discuss how I can bring my expertise and experience to help your organization build scalable, impactful solutions.</em></p>
 </div>
 </div>
 </section>
@@ -148,6 +161,16 @@
 <span class="skill-tag">GitHub Copilot</span>
 </div>
 </div>
+
+<div class="skill-category">
+    <div class="skill-category-title">Soft Skills</div>
+    <div class="skill-tags">
+        <span class="skill-tag">Agile Methodologies</span>
+        <span class="skill-tag">Leadership</span>
+        <span class="skill-tag">Team Collaboration</span>
+        <span class="skill-tag">Adaptability</span>
+    </div>
+</div>
 </div>
 </div>
 </section>
@@ -156,7 +179,9 @@
 <div class="section">
 <h2 class="section-header">Experience</h2>
 <div class="timeline-item">
-<div class="timeline-icon">C</div>
+<div class="timeline-icon" aria-label="Capgemini">
+    <img src="image.png" alt="Capgemini logo" style="width:36px; height:36px; object-fit:contain; display:block;" />
+</div>
 <div class="timeline-content">
 <div class="timeline-title">Full Stack Java Developer</div>
 <div class="timeline-subtitle">Capgemini India Pvt. Limited</div>
@@ -201,7 +226,7 @@
 <span class="tech-tag">JUnit</span>
 </div>
 <div class="project-links">
-<a class="project-link" href="#">→ GitHub Repository</a>
+<a class="project-link" href="https://github.com/KrAnubhav/Hospital-Management-System-Using-Spring-Boot" target="_blank" rel="noopener noreferrer">→ GitHub Repository</a>
 </div>
 </div>
 </div>
@@ -227,7 +252,7 @@
 <span class="tech-tag">JWT</span>
 </div>
 <div class="project-links">
-<a class="project-link" href="#">→ GitHub Repository</a>
+<a class="project-link" href="https://github.com/KrAnubhav/Bank-Management-System" target="_blank" rel="noopener noreferrer">→ GitHub Repository</a>
 </div>
 </div>
 </div>
@@ -250,8 +275,8 @@
 <span class="tech-tag">Responsive Design</span>
 </div>
 <div class="project-links">
-<a class="project-link" href="#">→ GitHub Repository</a>
-<a class="project-link" href="#">→ Live Demo</a>
+<a class="project-link" href="https://github.com/KrAnubhav/Educator-Learn-for-free" target="_blank" rel="noopener noreferrer">→ GitHub Repository</a>
+<a class="project-link" href="https://kranubhav.github.io/Educator-Learn-for-free/" target="_blank" rel="noopener noreferrer">→ Live Demo</a>
 </div>
 </div>
 </div>
@@ -273,10 +298,7 @@
 <div class="achievement-title">💻 DSA Excellence on GeeksforGeeks</div>
 <div class="achievement-description">Solved 560+ problems; appreciated by the founder for consistent contributions and quality solutions</div>
 </div>
-<div class="achievement-item">
-<div class="achievement-title">🎯 600+ LeetCode Problems</div>
-<div class="achievement-description">Demonstrated strong problem-solving skills and algorithmic thinking across diverse data structure challenges</div>
-</div>
+
 </div>
 </section>
 <!-- Certifications Section -->
@@ -323,7 +345,7 @@
 </div>
 </div>
 </section>
-</div>
+</main>
 <!-- Footer / Contact Section -->
 <footer class="footer" id="contact">
 <div class="footer-content">
@@ -340,10 +362,10 @@
                 </span>
 </div>
 <div class="social-links">
-<a class="social-link" href="https://www.linkedin.com/in/anubhav-kumar" target="_blank" title="LinkedIn">in</a>
-<a class="social-link" href="https://github.com/anubhavkumar" target="_blank" title="GitHub">Git</a>
-<a class="social-link" href="https://leetcode.com/anubhavkumar" target="_blank" title="LeetCode">LC</a>
-<a class="social-link" href="https://auth.geeksforgeeks.org/user/anubhavkumar" target="_blank" title="GeeksforGeeks">GFG</a>
+<a class="social-link" href="https://www.linkedin.com/in/anubhav-kumar" target="_blank" title="LinkedIn" rel="noopener noreferrer" aria-label="LinkedIn profile">in</a>
+<a class="social-link" href="https://github.com/anubhavkumar" target="_blank" title="GitHub" rel="noopener noreferrer" aria-label="GitHub profile">Git</a>
+<a class="social-link" href="https://leetcode.com/anubhavkumar" target="_blank" title="LeetCode" rel="noopener noreferrer" aria-label="LeetCode profile">LC</a>
+<a class="social-link" href="https://auth.geeksforgeeks.org/user/anubhavkumar" target="_blank" title="GeeksforGeeks" rel="noopener noreferrer" aria-label="GeeksforGeeks profile">GFG</a>
 </div>
 <p style="margin-top: 24px; color: var(--text-secondary); font-size: 14px;">
                 © 2025 Anubhav Kumar. Built with passion for clean code and user experience.
