@@ -1,5 +1,4 @@
-
-        :root {
+:root {
             --linkedin-blue: #0a66c2;
             --linkedin-dark-blue: #004182;
             --linkedin-black: #000000;
@@ -10,6 +9,7 @@
             --background-white: #ffffff;
             --text-primary: #000000;
             --text-secondary: rgba(0, 0, 0, 0.6);
+            --focus-ring: 0 0 0 3px rgba(10, 102, 194, 0.15);
         }
 
         * {
@@ -65,11 +65,23 @@
             border-radius: 4px;
             font-size: 14px;
             transition: background-color 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .navbar-link:hover {
             background-color: var(--linkedin-hover);
             color: var(--text-primary);
+        }
+
+        .navbar-icon {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 6px;
+            vertical-align: middle;
+            color: #666;
+            font-size: 0;
         }
 
         .navbar-toggle {
@@ -104,7 +116,16 @@
 
         .profile-banner {
             height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* fallback */
+        }
+
+        /* banner image inside .profile-banner */
+        .profile-banner-img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; /* crop to fill */
         }
 
         .profile-info {
@@ -117,28 +138,17 @@
             height: 152px;
             border-radius: 50%;
             border: 4px solid var(--background-white);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin-top: -76px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
-            font-weight: 700;
-            color: white;
+            overflow: hidden;
+            display: block;
+            background: none;
         }
 
-        .profile-name {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 16px;
-            color: var(--text-primary);
-        }
-
-        .profile-headline {
-            font-size: 16px;
-            color: var(--text-primary);
-            margin-top: 4px;
-            line-height: 1.4;
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
 
         .profile-location {
@@ -255,6 +265,15 @@
             border-radius: 16px;
             font-size: 13px;
             border: 1px solid var(--linkedin-border);
+            transition: color 0.25s, background 0.25s, box-shadow 0.25s;
+            cursor: pointer;
+        }
+        .skill-tag:hover, .skill-tag:focus {
+            background: linear-gradient(90deg, #e0f7fa 0%, #b2ebf2 100%);
+            color: #0077c8;
+            border-color: #00b2e3;
+            box-shadow: 0 2px 8px rgba(0,145,213,0.10);
+            outline: none;
         }
 
         /* Experience & Projects */
@@ -412,6 +431,16 @@
             margin-top: 4px;
         }
 
+        .certification-item {
+            transition: box-shadow 0.2s, border-left 0.2s, background 0.2s;
+            cursor: pointer;
+        }
+        .certification-item:hover, .certification-item:focus-visible {
+            box-shadow: 0 4px 16px rgba(0, 102, 204, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+            border-left: 5px solid #0a66c2;
+            background: #f4faff;
+        }
+
         /* Achievements */
         .achievement-item {
             padding: 16px;
@@ -419,6 +448,14 @@
             margin-bottom: 12px;
             background-color: var(--linkedin-light-gray);
             border-left: 4px solid var(--linkedin-blue);
+            transition: box-shadow 0.2s, border-left 0.2s, background 0.2s;
+            cursor: pointer;
+        }
+
+        .achievement-item:hover, .achievement-item:focus-visible {
+            box-shadow: 0 4px 16px rgba(0, 102, 204, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+            border-left: 5px solid #0a66c2;
+            background: #f4faff;
         }
 
         .achievement-title {
@@ -494,6 +531,32 @@
             background-color: var(--linkedin-dark-blue);
         }
 
+        /* About Section Animation */
+        .about-animated .about-anim {
+            display: inline-block;
+            font-weight: bold;
+            color: #0077c8;
+            background: linear-gradient(90deg, #0091d5 0%, #00b2e3 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: aboutFadeIn 1s ease both;
+        }
+        .about-animated .about-anim:nth-child(1) { animation-delay: 0.1s; }
+        .about-animated .about-anim:nth-child(2) { animation-delay: 0.2s; }
+        .about-animated .about-anim:nth-child(3) { animation-delay: 0.3s; }
+        .about-animated .about-anim:nth-child(4) { animation-delay: 0.4s; }
+        .about-animated .about-anim:nth-child(5) { animation-delay: 0.5s; }
+        .about-animated .about-anim:nth-child(6) { animation-delay: 0.6s; }
+        .about-animated .about-anim:nth-child(7) { animation-delay: 0.7s; }
+        .about-animated .about-anim:nth-child(8) { animation-delay: 0.8s; }
+        .about-animated .about-anim:nth-child(9) { animation-delay: 0.9s; }
+
+        @keyframes aboutFadeIn {
+          0% { opacity: 0; transform: translateY(10px); }
+          100% { opacity: 1; transform: none; }
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .navbar-menu {
@@ -524,6 +587,9 @@
 
             .profile-banner {
                 height: 120px;
+            }
+            .profile-banner-img {
+                height: 100%;
             }
 
             .profile-picture {
@@ -582,4 +648,38 @@
         section {
             scroll-margin-top: 60px;
         }
-    
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 12px;
+            top: 12px;
+            width: auto;
+            height: auto;
+            padding: 8px 12px;
+            background: #fff;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+        :focus {
+            outline: none;
+        }
+
+        :focus-visible {
+            box-shadow: var(--focus-ring);
+            border-radius: 4px;
+        }
+
+        .navbar-toggle {
+            font-size: 1.2rem;
+        }
+
+        /* profile-picture rules moved earlier */
