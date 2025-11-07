@@ -1,5 +1,4 @@
-
-        // Download functionality
+// Download functionality
         function downloadPortfolio() {
             const htmlContent = document.documentElement.outerHTML;
             const blob = new Blob([htmlContent], { type: 'text/html' });
@@ -16,8 +15,37 @@
         // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('navbarMenu');
+            const toggle = document.querySelector('.navbar-toggle');
+            if (!menu || !toggle) return;
             menu.classList.toggle('active');
+            const expanded = menu.classList.contains('active');
+            toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
         }
+
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('navbarMenu');
+            const toggle = document.querySelector('.navbar-toggle');
+            if (!menu || !toggle) return;
+            if (menu.classList.contains('active') && !menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('navbarMenu');
+                const toggle = document.querySelector('.navbar-toggle');
+                if (!menu || !toggle) return;
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.focus();
+                }
+            }
+        });
 
         // Close mobile menu when clicking a link
         document.querySelectorAll('.navbar-link').forEach(link => {
@@ -96,4 +124,3 @@
         window.addEventListener('load', () => {
             window.scrollTo(0, 0);
         });
-    
